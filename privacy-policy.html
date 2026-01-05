@@ -72,7 +72,7 @@
 <body>
     <div class="container">
         <h1>🔒 Privacy Policy</h1>
-        <p class="last-updated">Last Updated: January 4, 2026</p>
+        <p class="last-updated">Last Updated: January 5, 2026</p>
         
         <p>Welcome to <strong>Foodlyze</strong> ("the App"), developed by Harun Can Ayaz ("Developer", "we", "us", or "our"). This Privacy Policy explains how we collect, use, and protect your information when you use our App.</p>
         
@@ -100,9 +100,18 @@
             <li>Photos are stored locally on your device</li>
         </ul>
         
+        <h3 style="font-size: 16px; margin-top: 15px;">d) Voice Data</h3>
+        <ul>
+            <li>Voice recordings for the voice food entry feature</li>
+            <li>Audio is processed entirely on your device using Apple's Speech Recognition</li>
+            <li>Voice recordings are never sent to our servers or stored</li>
+            <li>Only the converted text is sent to OpenAI for food analysis</li>
+        </ul>
+        
         <h2>2. How We Use Your Information</h2>
         <ul>
             <li><strong>Food Analysis:</strong> Photos are sent to OpenAI's API to identify food items and estimate nutritional values</li>
+            <li><strong>Voice Entry:</strong> Voice recordings are converted to text on-device, then analyzed by OpenAI for food recognition</li>
             <li><strong>Calorie Tracking:</strong> To track your daily calorie and nutrient intake</li>
             <li><strong>Personalization:</strong> To calculate personalized daily goals based on your profile</li>
             <li><strong>Health Integration:</strong> To sync data with Apple HealthKit (with your permission)</li>
@@ -110,11 +119,12 @@
         
         <h2>3. Data Storage</h2>
         <div class="highlight">
-            <strong>⚡ Important:</strong> All your personal data (profile, food entries, photos) is stored <strong>locally on your device only</strong>. We do not have servers that store your personal information.
+            <strong>⚡ Important:</strong> All your personal data (profile, food entries, photos) is stored <strong>locally on your device only</strong>. We do not have servers that store your personal information. Voice recordings are processed on-device and never stored.
         </div>
         <ul>
             <li>Profile and nutrition data is stored using Core Data on your device</li>
             <li>Photos are stored locally on your device</li>
+            <li>Voice recordings are processed in real-time and not stored</li>
             <li>Data is not uploaded to our servers</li>
             <li>Data is not shared with third parties except as described below</li>
         </ul>
@@ -122,7 +132,8 @@
         <h2>4. Third-Party Services</h2>
         <p>Foodlyze uses the following third-party services:</p>
         <ul>
-            <li><strong>OpenAI API:</strong> Food photos are sent to OpenAI for AI-powered nutritional analysis. Please review <a href="https://openai.com/privacy/" target="_blank">OpenAI's Privacy Policy</a></li>
+            <li><strong>OpenAI API:</strong> Food photos and voice-transcribed text are sent to OpenAI for AI-powered nutritional analysis. Please review <a href="https://openai.com/privacy/" target="_blank">OpenAI's Privacy Policy</a></li>
+            <li><strong>Apple Speech Recognition:</strong> Voice input is processed on-device using Apple's Speech Recognition framework. No audio data is sent to external servers.</li>
             <li><strong>Apple HealthKit:</strong> With your permission, we may read/write health data to Apple Health</li>
             <li><strong>Firebase Crashlytics:</strong> Anonymous crash reports to improve app stability</li>
         </ul>
@@ -131,6 +142,8 @@
         <ul>
             <li><strong>Camera:</strong> To take photos of food for analysis</li>
             <li><strong>Photo Library:</strong> To select existing food photos for analysis</li>
+            <li><strong>Microphone:</strong> To record voice input for the voice food entry feature</li>
+            <li><strong>Speech Recognition:</strong> To convert voice recordings to text on-device</li>
             <li><strong>HealthKit:</strong> To sync calorie and nutrition data with Apple Health (optional)</li>
             <li><strong>Notifications:</strong> To send water intake reminders (optional)</li>
         </ul>
@@ -138,6 +151,7 @@
         <h2>6. Data Retention</h2>
         <ul>
             <li>Your data remains on your device until you delete it</li>
+            <li>Voice recordings are never stored - they are processed in real-time only</li>
             <li>You can delete all data at any time from Settings > Delete All Data</li>
             <li>Uninstalling the app will remove all locally stored data</li>
         </ul>
@@ -151,6 +165,7 @@
             <li>Access your data (stored locally on your device)</li>
             <li>Delete your data at any time</li>
             <li>Opt-out of HealthKit integration</li>
+            <li>Deny microphone and speech recognition permissions</li>
             <li>Disable notifications</li>
         </ul>
         
