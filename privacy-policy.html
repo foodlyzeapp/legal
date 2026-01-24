@@ -102,6 +102,23 @@
             color: #1a1a1a;
         }
         
+        .privacy-box {
+            background: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px;
+        }
+        
+        .privacy-box h3 {
+            color: #2e7d32;
+            margin-top: 0;
+        }
+        
+        .privacy-box ul {
+            margin-bottom: 0;
+        }
+        
         a {
             color: #2e7d32;
             text-decoration: none;
@@ -144,6 +161,23 @@
             margin: 0 12px;
         }
         
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+        
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+        
         @media (max-width: 600px) {
             .container {
                 padding: 40px 20px 60px;
@@ -163,13 +197,41 @@
     <div class="container">
         <header>
             <h1>Privacy Policy</h1>
-            <p class="meta">Last Updated: January 11, 2026</p>
+            <p class="meta">Last Updated: January 24, 2026</p>
         </header>
         
         <p class="intro">Welcome to Foodlyze, developed by Harun Can Ayaz. This Privacy Policy explains how we collect, use, and protect your information when you use our application.</p>
         
         <section>
+            <h2>App Privacy Summary</h2>
+            
+            <div class="privacy-box">
+                <h3>Data Linked to You</h3>
+                <ul>
+                    <li><strong>Contact Info:</strong> Name (for personalization)</li>
+                    <li><strong>Health & Fitness:</strong> HealthKit data (steps, calories burned)</li>
+                    <li><strong>Purchases:</strong> Premium subscription status</li>
+                </ul>
+            </div>
+            
+            <div class="privacy-box">
+                <h3>Data Not Linked to You</h3>
+                <ul>
+                    <li><strong>User Content:</strong> Photos (food analysis), Audio (voice input)</li>
+                    <li><strong>Identifiers:</strong> Device ID (Firebase)</li>
+                    <li><strong>Usage Data:</strong> Product interaction (Firebase Analytics)</li>
+                    <li><strong>Diagnostics:</strong> Crash data, Performance data (Firebase Crashlytics)</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
             <h2>1. Information We Collect</h2>
+            
+            <h3>Contact Information</h3>
+            <ul>
+                <li>Name (used for personalized greetings like "Good morning, [Name]")</li>
+            </ul>
             
             <h3>Profile Information</h3>
             <ul>
@@ -178,26 +240,28 @@
                 <li>Daily calorie and macro targets</li>
             </ul>
             
-            <h3>Health & Nutrition Data</h3>
+            <h3>Health & Fitness Data</h3>
             <ul>
                 <li>Food entries with nutritional information</li>
                 <li>Calorie, protein, carbohydrate, and fat intake</li>
                 <li>Water consumption tracking</li>
                 <li>Meal categorization and history</li>
                 <li>Favorite foods and frequently consumed items</li>
+                <li>Apple HealthKit data: steps, distance, active minutes, calories burned (with your permission)</li>
             </ul>
             
             <h3>Photos & Media</h3>
             <ul>
                 <li>Food photos captured via camera or selected from gallery</li>
-                <li>Photos are sent to AI services for nutritional analysis</li>
+                <li>Photos are sent to our secure server for AI-powered nutritional analysis</li>
+                <li>Photos are processed and not permanently stored on our servers</li>
                 <li>Photos are stored locally on your device</li>
             </ul>
             
             <h3>Voice Data</h3>
             <ul>
                 <li>Voice recordings for hands-free food entry</li>
-                <li>Audio is processed entirely on-device using Apple Speech Recognition</li>
+                <li>Audio is processed on-device using Apple Speech Recognition</li>
                 <li>Voice recordings are never stored or transmitted to external servers</li>
                 <li>Only converted text is sent for food analysis</li>
             </ul>
@@ -205,28 +269,79 @@
             <h3>Barcode Data</h3>
             <ul>
                 <li>Product barcodes scanned for food identification</li>
-                <li>Barcode data is used to retrieve nutritional information from databases</li>
+                <li>Barcode data is used to retrieve nutritional information from Open Food Facts database</li>
+            </ul>
+            
+            <h3>Usage Data</h3>
+            <ul>
+                <li>App usage patterns via Firebase Analytics</li>
+                <li>Feature interactions and screen views</li>
+                <li>This data is collected anonymously and not linked to your identity</li>
+            </ul>
+            
+            <h3>Diagnostic Data</h3>
+            <ul>
+                <li>Crash reports via Firebase Crashlytics</li>
+                <li>Performance metrics (app launch time, response times)</li>
+                <li>This data helps us improve app stability and performance</li>
+                <li>Diagnostic data is not linked to your identity</li>
+            </ul>
+            
+            <h3>Identifiers</h3>
+            <ul>
+                <li>Device ID for Firebase services</li>
+                <li>Used for analytics and crash reporting</li>
+                <li>Not linked to your personal identity</li>
+            </ul>
+            
+            <h3>Purchase Information</h3>
+            <ul>
+                <li>Premium subscription status</li>
+                <li>Subscription is processed through Apple's App Store</li>
+                <li>We never receive or store your payment details</li>
             </ul>
         </section>
         
         <section>
             <h2>2. How We Use Your Information</h2>
             <ul>
+                <li><strong>Personalization:</strong> Name is used for personalized greetings and AI Coach messages</li>
                 <li><strong>Food Analysis:</strong> Photos and text are processed by AI to identify foods and estimate nutritional values</li>
                 <li><strong>Barcode Lookup:</strong> Scanned barcodes retrieve product nutrition data</li>
-                <li><strong>AI Coach:</strong> Your nutrition data may be analyzed to provide personalized dietary insights</li>
+                <li><strong>AI Coach:</strong> Your nutrition data is analyzed to provide personalized dietary insights (Premium)</li>
                 <li><strong>Calorie Tracking:</strong> To track and display your daily nutritional intake</li>
-                <li><strong>Personalization:</strong> To calculate personalized daily goals based on your profile</li>
+                <li><strong>Health Goals:</strong> To calculate personalized daily goals based on your profile</li>
                 <li><strong>Health Integration:</strong> To sync data with Apple HealthKit with your permission</li>
+                <li><strong>App Improvement:</strong> Analytics and crash data help us improve the app</li>
                 <li><strong>Localization:</strong> To display the app in your preferred language</li>
             </ul>
         </section>
         
         <section>
-            <h2>3. Data Storage</h2>
+            <h2>3. Data Security</h2>
             
             <div class="highlight">
-                <p><strong>Local-First Privacy:</strong> All your personal data is stored locally on your device. We do not operate servers that store your personal information. Your data stays on your device and under your control.</p>
+                <p><strong>Security Measures:</strong> We implement comprehensive security measures to protect your data during transmission and processing.</p>
+            </div>
+            
+            <h3>Security Features</h3>
+            <ul>
+                <li><strong>Secure API Communication:</strong> All data transmitted to our servers uses Firebase Cloud Functions with HTTPS encryption</li>
+                <li><strong>Rate Limiting:</strong> Protection against abuse with request limits</li>
+                <li><strong>Input Validation:</strong> All inputs are validated and sanitized</li>
+                <li><strong>Image Size Limits:</strong> Maximum 5MB per image for security</li>
+                <li><strong>Language Validation:</strong> Only supported languages are processed</li>
+                <li><strong>Response Sanitization:</strong> All API responses are sanitized before being returned</li>
+                <li><strong>Firebase App Check:</strong> Validates that requests come from our genuine app</li>
+                <li><strong>No Direct API Key Exposure:</strong> API keys are stored securely on our servers, never in the app</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>4. Data Storage</h2>
+            
+            <div class="highlight">
+                <p><strong>Local-First Privacy:</strong> Your personal profile and nutrition data is stored locally on your device. We do not store your personal information on our servers.</p>
             </div>
             
             <ul>
@@ -234,30 +349,63 @@
                 <li>Food photos are stored locally on your device</li>
                 <li>Voice recordings are processed in real-time and never stored</li>
                 <li>Favorite foods and history are stored locally</li>
-                <li>Data is not uploaded to our servers</li>
-            </ul>
-        </section>
-        
-        <section>
-            <h2>4. Premium Subscription</h2>
-            <p>Foodlyze offers optional premium subscriptions with enhanced features:</p>
-            <ul>
-                <li>Subscription purchases are processed through Apple's App Store</li>
-                <li>Payment information is handled entirely by Apple</li>
-                <li>We never receive or store your payment details</li>
-                <li>Subscription status is stored locally on your device</li>
+                <li>Analytics data is stored anonymously by Firebase</li>
+                <li>Crash reports are stored anonymously by Firebase Crashlytics</li>
             </ul>
         </section>
         
         <section>
             <h2>5. Third-Party Services</h2>
             <p>Foodlyze integrates with the following third-party services:</p>
+            
+            <table>
+                <tr>
+                    <th>Service</th>
+                    <th>Purpose</th>
+                    <th>Data Shared</th>
+                </tr>
+                <tr>
+                    <td>OpenAI API</td>
+                    <td>Food analysis, AI Coach</td>
+                    <td>Food photos, nutrition queries</td>
+                </tr>
+                <tr>
+                    <td>Firebase Analytics</td>
+                    <td>App usage analytics</td>
+                    <td>Anonymous usage data, Device ID</td>
+                </tr>
+                <tr>
+                    <td>Firebase Crashlytics</td>
+                    <td>Crash reporting</td>
+                    <td>Crash logs, performance data</td>
+                </tr>
+                <tr>
+                    <td>Firebase Cloud Functions</td>
+                    <td>Secure API processing</td>
+                    <td>Food photos (temporary)</td>
+                </tr>
+                <tr>
+                    <td>Apple HealthKit</td>
+                    <td>Health data sync</td>
+                    <td>Steps, calories (with permission)</td>
+                </tr>
+                <tr>
+                    <td>Apple Speech Recognition</td>
+                    <td>Voice input</td>
+                    <td>Processed on-device only</td>
+                </tr>
+                <tr>
+                    <td>Open Food Facts</td>
+                    <td>Barcode database</td>
+                    <td>Product barcodes</td>
+                </tr>
+            </table>
+            
+            <p>For more information about third-party privacy practices:</p>
             <ul>
-                <li><strong>OpenAI API:</strong> Food photos and text are processed for AI-powered nutritional analysis. See <a href="https://openai.com/privacy/" target="_blank">OpenAI's Privacy Policy</a></li>
-                <li><strong>Apple Speech Recognition:</strong> Voice input is processed on-device</li>
-                <li><strong>Apple HealthKit:</strong> Optional sync of nutrition data with Apple Health</li>
-                <li><strong>Firebase Crashlytics:</strong> Anonymous crash reports to improve app stability</li>
-                <li><strong>Open Food Facts:</strong> Barcode database for product information</li>
+                <li><a href="https://openai.com/privacy/" target="_blank">OpenAI Privacy Policy</a></li>
+                <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
+                <li><a href="https://www.apple.com/privacy/" target="_blank">Apple Privacy Policy</a></li>
             </ul>
         </section>
         
@@ -269,16 +417,18 @@
                 <li><strong>Microphone:</strong> Voice food entry feature</li>
                 <li><strong>Speech Recognition:</strong> Convert voice to text on-device</li>
                 <li><strong>HealthKit:</strong> Sync with Apple Health (optional)</li>
-                <li><strong>Notifications:</strong> Reminders (optional)</li>
+                <li><strong>Notifications:</strong> Smart reminders (optional)</li>
             </ul>
         </section>
         
         <section>
             <h2>7. Data Retention</h2>
             <ul>
-                <li>Your data remains on your device until you choose to delete it</li>
+                <li>Your local data remains on your device until you choose to delete it</li>
                 <li>Voice recordings are processed in real-time and never stored</li>
-                <li>You can delete all data anytime from Settings</li>
+                <li>Food photos sent for analysis are not permanently stored on our servers</li>
+                <li>Firebase Analytics data is retained according to Firebase's retention policies</li>
+                <li>You can delete all local data anytime from Settings</li>
                 <li>Uninstalling the app removes all locally stored data</li>
             </ul>
         </section>
@@ -293,16 +443,29 @@
             <p>You have the right to:</p>
             <ul>
                 <li>Access all your data stored locally on your device</li>
-                <li>Delete your data at any time</li>
-                <li>Export your data</li>
+                <li>Delete your data at any time via Settings</li>
+                <li>Export your data (PDF reports)</li>
                 <li>Opt-out of HealthKit integration</li>
                 <li>Deny any permissions</li>
                 <li>Cancel your premium subscription anytime</li>
+                <li>Request information about data we process</li>
             </ul>
         </section>
         
         <section>
-            <h2>10. Changes to This Policy</h2>
+            <h2>10. Data Tracking</h2>
+            <p>We do <strong>NOT</strong> use your data for tracking purposes such as:</p>
+            <ul>
+                <li>Targeted advertising</li>
+                <li>Sharing with data brokers</li>
+                <li>Cross-app tracking</li>
+                <li>Third-party advertising</li>
+            </ul>
+            <p>Your data is used solely for app functionality, personalization, and improving the app experience.</p>
+        </section>
+        
+        <section>
+            <h2>11. Changes to This Policy</h2>
             <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
         </section>
         
